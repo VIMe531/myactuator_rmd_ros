@@ -35,6 +35,16 @@
                    timeout="$(arg timeout)"/>
   </xacro:if>
 
+<!-- Added Actuator -->
+  <xacro:property name="actuator_model" value="$(arg actuator)"/>
+  <xacro:if value="${actuator_model == 'X4_3'}">
+    <xacro:include filename="$(find myactuator_rmd_description)/urdf/X4_3.xacro"/>
+    <xacro:X4_3 prefix="$(arg prefix)" joint_name="${joint_name}"
+                   simulation="$(arg simulation)"
+                   ifname="$(arg ifname)" actuator_id="$(arg actuator_id)"
+                   timeout="$(arg timeout)"/>
+  </xacro:if>
+
   <!-- Parent and child link and their fixed joints to the actuator -->
   <link name="${parent_link}"/>
   <link name="${child_link}"/>
