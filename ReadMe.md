@@ -13,7 +13,7 @@ You will need to clone both of the repositories to your ROS 2 workspace (e.g. `~
 
 ```bash
 $ git clone https://github.com/2b-t/myactuator_rmd.git
-$ git clone https://github.com/2b-t/myactuator_rmd_ros.git
+$ git clone https://github.com/VIMe531/myactuator_rmd_ros.git
 ```
 
 The first contains the C++ library as well as the Python bindings, the second the `ros2_control` integration and CAD models. Install the package dependencies with `$ rosdep install --from-paths src/ --ignore-src -r -y` (potentially you also have to [follow these instructions for installing the C++ library's dependencies](https://github.com/2b-t/myactuator_rmd/blob/main/ReadMe.md)) and proceed to build your workspace with `$ colcon build --symlink-install`.
